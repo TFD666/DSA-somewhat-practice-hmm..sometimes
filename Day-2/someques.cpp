@@ -45,7 +45,5 @@ int main()
         dup=dup^arr[i];
     }
     cout<<dup;
-
-
     return 0;
 }
