@@ -141,6 +141,41 @@
 
 
 //TRIPLET PAIR SUM
+// #include<iostream>
+// #include<vector>
+// using namespace std;
+// int main()
+// {
+//     int n;
+//     cin>>n;
+//     int sum;
+//     cout<<"enter the sum number";
+//     cin>>sum;
+//     vector<int>a;
+//     int x;
+//     for(int i=0;i<n;i++){
+//         cin>>x;
+//         a.push_back(x);
+//     }
+//     for(int i=0;i<a.size();i++){
+//         cout<<a[i];
+//     }
+//     for(int i=0;i<a.size();i++){
+//         for(int j=i+1;j<a.size();j++){
+//             for(int k=j+1;k<a.size();k++){
+//                 if(a[i]+a[j]+a[k]==sum){
+//                     cout<<"Pair:("<<a[i]<<","<<a[j]<<","<<a[k]<<")"<<endl;
+                    
+//                 }
+//             }
+//         }
+//     }
+//     return 0;
+// }
+
+
+
+//SORT 0"s and 1`s
 #include<iostream>
 #include<vector>
 using namespace std;
@@ -148,27 +183,23 @@ int main()
 {
     int n;
     cin>>n;
-    int sum;
-    cout<<"enter the sum number";
-    cin>>sum;
     vector<int>a;
-    int x;
+    int c;
     for(int i=0;i<n;i++){
-        cin>>x;
-        a.push_back(x);
+        cin>>c;
+        a.push_back(c);
     }
-    for(int i=0;i<a.size();i++){
-        cout<<a[i];
-    }
-    for(int i=0;i<a.size();i++){
-        for(int j=i+1;j<a.size();j++){
-            for(int k=j+1;k<a.size();k++){
-                if(a[i]+a[j]+a[k]==sum){
-                    cout<<"Pair:("<<a[i]<<","<<a[j]<<","<<a[k]<<")"<<endl;
-                    
-                }
-            }
+    int start=0,end=a.size()-1;
+    while(start!=end){
+        if(a[start]==1){
+            swap(a[start],a[end]);
+            end--;
+        }else{
+            start++;
         }
+    }
+    for(int i=0;i<a.size();i++){
+        cout<<a[i]<<" ";
     }
     return 0;
 }
