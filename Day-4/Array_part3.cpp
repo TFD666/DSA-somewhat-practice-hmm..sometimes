@@ -95,25 +95,93 @@
 //     return 0;
 // }
 
+// #include<iostream>
+// #include<vector>
+// #include <bits/stdc++.h> 
+// using namespace std;
+// int main()
+// {
+//     int n;
+//     cin>>n;
+//     vector<int>a;
+//     for(int i=0;i<n;i++){
+//         int c;
+//         cin>>c;
+//         a.push_back(c);
+//     }
+//     int first=a[0];
+//     while(first!=a[first]){
+//         swap(a[0],a[first]);
+//     }
+//     cout<<a[first];
+
+//     return 0;
+// }
+// #include<vector>
+// #include<iostream>
+// using namespace std;
+// int main()
+// {
+//     int a;
+//     cin>>a;
+//     int arr[a][a];
+//     for(int i=0;i<a;i++){
+//         for(int j=0;j<a;j++){
+//             cin>>arr[i][j];
+//         }
+//     }
+//     for(int i=0;i<a;i++){
+//         if(i%2==0){
+//             for(int j=0;j<a;j++){
+//                 cout<<arr[j][i];
+//             }
+//         }else{
+//             for(int j=a-1;j>=0;j--){
+//                 cout<<arr[j][i];
+//             }
+//         }
+//     }
+//     return 0;
+// }
+
 #include<iostream>
 #include<vector>
-#include <bits/stdc++.h> 
 using namespace std;
 int main()
 {
-    int n;
-    cin>>n;
-    vector<int>a;
-    for(int i=0;i<n;i++){
-        int c;
-        cin>>c;
-        a.push_back(c);
+
+    int n1,n2;
+    cin>>n1;
+    cin>>n2;
+    int sr=0,er=n1-1,sc=0,ec=n2-1;
+    int arr[n1][n2];
+    for(int i=0;i<n1;i++){
+        for(int j=0;j<n2;j++){
+            cin>>arr[i][j];
+        }
     }
-    int first=a[0];
-    while(first!=a[first]){
-        swap(a[0],a[first]);
+    while(sr<er){
+        //starting row
+        for(int i=sr;i<=ec;i++){
+            cout<<arr[sr][i]<<" ";
+        }
+        sr++;
+        //ending coul
+        for(int j=sr;j<=er;j++){
+            cout<<arr[j][ec]<<" ";
+        }
+        ec--;
+        // ending row
+        for(int k=ec;k>=sc;k--){
+            cout<<arr[er][k]<<" ";
+        }
+        er--;
+        //starting coul
+        for(int l=er;l>=sr;l--){
+            cout<<arr[l][sc]<<" ";
+        }
+        sc++;
     }
-    cout<<a[first];
 
     return 0;
 }
