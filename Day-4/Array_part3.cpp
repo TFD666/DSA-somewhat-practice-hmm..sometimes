@@ -160,6 +160,7 @@ int main()
             cin>>arr[i][j];
         }
     }
+
     while(sr<er){
         //starting row
         for(int i=sr;i<=ec;i++){
