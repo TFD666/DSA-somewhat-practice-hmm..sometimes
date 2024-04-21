@@ -144,45 +144,90 @@
 //     return 0;
 // }
 
+// #include<iostream>
+// #include<vector>
+// using namespace std;
+// int main()
+// {
+
+//     int n1,n2;
+//     cin>>n1;
+//     cin>>n2;
+//     int sr=0,er=n1-1,sc=0,ec=n2-1;
+//     int arr[n1][n2];
+//     for(int i=0;i<n1;i++){
+//         for(int j=0;j<n2;j++){
+//             cin>>arr[i][j];
+//         }
+//     }
+
+//     while(sr<er){
+//         //starting row
+//         for(int i=sr;i<=ec;i++){
+//             cout<<arr[sr][i]<<" ";
+//         }
+//         sr++;
+//         //ending coul
+//         for(int j=sr;j<=er;j++){
+//             cout<<arr[j][ec]<<" ";
+//         }
+//         ec--;
+//         // ending row
+//         for(int k=ec;k>=sc;k--){
+//             cout<<arr[er][k]<<" ";
+//         }
+//         er--;
+//         //starting coul
+//         for(int l=er;l>=sr;l--){
+//             cout<<arr[l][sc]<<" ";
+//         }
+//         sc++;
+//     }
+
+//     return 0;
+// }
+
+
+
 #include<iostream>
 #include<vector>
 using namespace std;
 int main()
 {
-
-    int n1,n2;
-    cin>>n1;
-    cin>>n2;
-    int sr=0,er=n1-1,sc=0,ec=n2-1;
-    int arr[n1][n2];
-    for(int i=0;i<n1;i++){
-        for(int j=0;j<n2;j++){
-            cin>>arr[i][j];
-        }
-    }
-
-    while(sr<er){
+    int n;
+    cin>>n;
+    int arr[n][n];
+    int sr=0,er=n-1,sc=0,ec=n-1,num=1;
+    while(sr<=er){
         //starting row
         for(int i=sr;i<=ec;i++){
-            cout<<arr[sr][i]<<" ";
+            arr[sr][i]=num;
+            num++;
         }
         sr++;
         //ending coul
         for(int j=sr;j<=er;j++){
-            cout<<arr[j][ec]<<" ";
+            arr[j][ec]=num;
+            num++;
         }
         ec--;
         // ending row
         for(int k=ec;k>=sc;k--){
-            cout<<arr[er][k]<<" ";
+            arr[er][k]=num;
+            num++;
         }
         er--;
         //starting coul
         for(int l=er;l>=sr;l--){
-            cout<<arr[l][sc]<<" ";
+            arr[l][sc]=num;
+            num++;
         }
         sc++;
     }
-
-    return 0;
+    for(int i=0;i<n;i++){
+        for(int j=0;j<n;j++){
+            cout<<arr[i][j]<<" ";
+        }
+        cout<<endl;
+    }
 }
