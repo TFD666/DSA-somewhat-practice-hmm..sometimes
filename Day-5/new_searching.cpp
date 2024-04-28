@@ -82,3 +82,44 @@
 
 //     return 0;
 // }
+
+
+
+//find square root using binary search of a number
+#include<iostream>
+using namespace std;
+int main()
+{
+    int n;
+    cin>>n;
+    int s=0,e=n;
+    int mid=s/2+e/2;
+    int sr=0;
+    while(s<=e){
+        if(mid*mid==n){
+            sr=mid;
+            break;
+        }if(mid*mid>n){
+            e=mid-1;
+        }else{
+            s=mid+1;
+            sr=mid;
+        }
+        mid=(s+e)/2;
+    }
+    int pre;
+    cin>>pre;
+    long double step=0.1;
+    long double fa=sr+step;
+
+    for(int i=0;i<pre;i++){
+        for(long double j=fa;j*j<n;j=j+step){
+            fa=j;
+        }
+        step=step/10;
+    }
+    cout<<fa;
+    long double ea=3.2323232332;
+    cout<<ea;
+    return 0;
+}
