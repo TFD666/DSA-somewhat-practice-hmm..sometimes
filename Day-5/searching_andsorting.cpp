@@ -15,5 +15,3 @@
 //     return 0;
 // }
 //first occurence of  anumber
-
-//hello
