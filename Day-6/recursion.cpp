@@ -55,10 +55,40 @@
 // }
 
 
-#include<iostream>
-using namespace std;
-int fun()
-int main()
-{
-    return 0;
-}
+// #include<iostream>
+// using namespace std;
+// int fib(int n){
+//     if(n==0){
+//         return 0;
+//     }
+//     if(n==1){
+//         return 1;
+//     }
+//     return fib(n-1)+fib(n-2);
+// }
+// int main(){
+//     int n;
+//     cin>>n;
+//     cout<<fib(n);
+//     return 0;
+// }
+
+// #include<iostream>
+// using namespace std;
+// int stairs(int n){
+//     int d[n];
+//     d[0]=1;
+//     d[1]=2;
+//     for(int i=2;i<n;i++){
+//         d[i]=d[i-1]+d[i-2];
+//     }
+//     return d[n];
+// }
+// int main()
+// {
+//     int n;
+//     cin>>n;
+//     cout<<stairs(n);
+
+//     return 0;
+// }
