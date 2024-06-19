@@ -92,3 +92,48 @@
 
 //     return 0;
 // }
+
+// #include<iostream>
+// using namespace std;
+// void arrr(int arr[],int n,int i){
+//     if(i>=n){
+//         return;
+//     }
+//     cout<<arr[i]<<" ";
+//     arrr(arr,n,++i);
+// }
+// int main()
+// {
+//     int n=5;
+//     int arr[5]={10,20,30,40,50};
+//     int i=0;
+//     arrr(arr,n,i);
+//     return 0;
+// }
+
+
+#include<iostream>
+using namespace std;
+void maxi(int arr[],int n,int &maxnum){
+    if(n==0){
+        return;
+    }
+    if(arr[0]>=maxnum){
+        maxnum=arr[0];
+    }
+    n--;
+    maxi(arr+1,n,maxnum);
+}
+int main()
+{
+    int n;
+    cin>>n;
+    int arr[n];
+    for(int i=0;i<n;i++){
+        cin>>arr[i];
+    }
+    int maxnum=arr[0];
+    maxi(arr,n,maxnum);
+    cout<<maxnum;
+    return 0;
+}
