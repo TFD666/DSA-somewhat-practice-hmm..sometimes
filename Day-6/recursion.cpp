@@ -112,28 +112,96 @@
 // }
 
 
-#include<iostream>
-using namespace std;
-void maxi(int arr[],int n,int &maxnum){
-    if(n==0){
-        return;
-    }
-    if(arr[0]>=maxnum){
-        maxnum=arr[0];
-    }
-    n--;
-    maxi(arr+1,n,maxnum);
-}
-int main()
-{
-    int n;
-    cin>>n;
-    int arr[n];
-    for(int i=0;i<n;i++){
-        cin>>arr[i];
-    }
-    int maxnum=arr[0];
-    maxi(arr,n,maxnum);
-    cout<<maxnum;
-    return 0;
-}
+// #include<iostream>
+// using namespace std;
+// void maxi(int arr[],int n,int &maxnum){
+//     if(n==0){
+//         return;
+//     }
+//     if(arr[0]>=maxnum){
+//         maxnum=arr[0];
+//     }
+//     n--;
+//     maxi(arr+1,n,maxnum);
+// }
+// int main()
+// {
+//     int n;
+//     cin>>n;
+//     int arr[n];
+//     for(int i=0;i<n;i++){
+//         cin>>arr[i];
+//     }
+//     int maxnum=arr[0];
+//     maxi(arr,n,maxnum);
+//     cout<<maxnum;
+//     return 0;
+// }
+
+// #include<iostream>
+// using namespace std;
+// bool findstr(string str,char key,int i,int n){
+//     if(i>=n){
+//         return false;
+//     }
+//     if(str[i]==key){
+//         return true;
+//     }
+//     return findstr(str,key,i+1,n);
+// }
+// int main()
+// {
+//     string str="Harsh";
+//     char key='s';
+//     int i=0;
+//     int n=str.length();
+//     cout<<findstr(str,key,i,n);
+//     return 0;
+// }
+
+// #include<iostream>
+// #include<vector>
+// using namespace std;
+// void findstr(string str,char key,int i,int n,vector<int>&arr){
+//     if(i>=n){
+//         return;
+//     }
+//     if(str[i]==key){
+//         arr.push_back(i);
+//     }
+//     return findstr(str,key,i+1,n,arr);
+// }
+// int main()
+// {
+//     string str="Hasssrsh";
+//     char key='s';
+//     int i=0;
+//     int n=str.length();
+//     vector<int> arr;
+//     findstr(str,key,i,n,arr);
+//     for(auto a:arr){
+//         cout<<a<<" ";
+//     }
+//     return 0;
+// }
+
+// #include<iostream>
+// using namespace std;
+// void last(int &n){
+//     if(n==0){
+//         return;
+//     }
+//     int ans=n%10;
+//     cout<<ans;
+//     n=n/10;
+//     return last(n);
+// }
+// int main()
+// {
+//     int n;
+//     cin>>n;
+//     last(n);
+//     return 0;
+// }
+
+
