@@ -48,27 +48,27 @@
 // }
 
 // subsequence of a arary
-// #include<iostream>
-// #include<vector>
-// using namespace std;
-// void printsubsequence(string arr,string out,int i){
-//     if(i>=arr.length()){
-//         cout<<out<<endl;
-//         return;
-//     }
-//     //not includeed
-//     printsubsequence(arr,out,i+1);
-//     //includeed
-//     out.push_back(arr[i]);
-//     printsubsequence(arr,out,i+1);
+#include<iostream>
+#include<vector>
+using namespace std;
+void printsubsequence(string arr,string out,int i){
+    if(i>=arr.length()){
+        cout<<out<<endl;
+        return;
+    }
+    //not includeed
+    printsubsequence(arr,out,i+1);
+    //includeed
+    out.push_back(arr[i]);
+    printsubsequence(arr,out,i+1);
 
-// }
+}
 
-// int main()
-// {
-//     string arr="abc";
-//     string out="";
-//     int i=0;
-//     printsubsequence(arr,out,i);
-//     return 0;
-// }
+int main()
+{
+    string arr="abc";
+    string out="";
+    int i=0;
+    printsubsequence(arr,out,i);
+    return 0;
+}
