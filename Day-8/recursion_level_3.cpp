@@ -8,9 +8,7 @@ int coinsum(vector<int> arr,int target,int sum){
     if(sum>target){
         return ;
     }
-    for(int i=0;i<arr.size();i++){
-        coinsum
-    }
+    
 }
 int main()
 {
