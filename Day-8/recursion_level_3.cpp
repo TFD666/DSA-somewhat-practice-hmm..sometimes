@@ -91,19 +91,31 @@
 //     return 0;
 // }
 
+// #include<iostream>
+// #include<vector>
+// using namespace std;
+// int rober(vector<int>&arr){
+//     // if(arr>=arr.size()){
+//     //     return;
+//     // }
+// }
+// int main()
+// {
+//     vector<int> arr={1,2,3,7};
+//     cout<<&arr;
+//     // cout<<rober(arr);
+//     return 0;
+// }
+
 #include<iostream>
 #include<vector>
 using namespace std;
-int rober(vector<int>&arr){
-    // if(arr>=arr.size()){
-    //     return;
-    // }
-}
 int main()
 {
-    vector<int> arr={1,2,3,7};
-    cout<<&arr;
-    // cout<<rober(arr);
+    string a1="123";
+    string a2="32";
+    
+
     return 0;
 }
 
