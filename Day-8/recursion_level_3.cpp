@@ -107,16 +107,74 @@
 //     return 0;
 // }
 
-#include<iostream>
-#include<vector>
-using namespace std;
-int main()
-{
-    string a1="123";
-    string a2="32";
+// #include<iostream>
+// #include<limits>
+// #include<vector>
+// using namespace std;
+// int main()
+// {
+//     string c="asdfsasdf";
+//     char t='x';
+//     int locc=0;
+//     for(int i=c.size();i>=0;i--){
+//         if(c[i]==t){
+//             locc=i;
+//             break;
+//         }
+//     }
+//     cout<<locc;
+//     return 0;
+// }
+//  |
+//  |
+//  |
+// \ /
+// #include<iostream>
+// #include<string>
+// using namespace std;
+// int lastoccurance(string &s,char &tar,int i){
+//     if(i<=0){
+//         return INT32_MIN;
+//     }
+//     if(s[i]==tar){
+//         return i;
+//     }
+//     lastoccurance(s,tar,i-1);
     
 
-    return 0;
-}
+// }
+// int main()
+// {
+//     string s="asdfasdf";
+//     char tar='a';
+//     int i=s.size();
+//     cout<<lastoccurance(s,tar,i);
+//     return 0;
+// }
+
+
+// #include<iostream>
+// #include<string>
+// using namespace std;
+// int palindromecheck(string &s,int i,int l){
+//     if(i>=l){
+//         return 1;
+//     }
+//     if(s[i]!=s[l]){
+//         return -1;
+//     }
+//     palindromecheck(s,i+1,l-1);
+// }
+
+// int main()
+// {
+//     string s="asa";
+//     int i=0;
+//     int l=s.size()-1;
+//     cout<<palindromecheck(s,i,l);
+//     return 0;
+// }
+
+
 
 
