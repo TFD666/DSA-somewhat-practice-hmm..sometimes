@@ -101,3 +101,37 @@ int main()
     }
     return 0;
 }
+
+//inplace merge sort
+// #include<iostream>
+// using namespace std;
+// void  merge(int *arr,int s,int e ){
+    
+// }
+// void mergesort(int *arr,int s,int e){
+//     //base case
+//     if(s>=e){
+//         return;
+//     }
+//     //find mid
+//     int mid=(s+e)/2;
+//     //left part 
+//     mergesort(arr,s,mid);
+//     //right part
+//     mergesort(arr,mid+1,e);
+//     //merge th eelememts
+//     merge(arr,s,e);
+
+// }
+// int main()
+// {
+//     int arr[]={5,1,9,12,4};
+//     int n=5;
+//     int s=0,e=n-1;
+//     mergesort(arr,s,e);
+//     for(int i=0;i<n;i++){
+//         cout<<arr[i]<<" ";
+//     }
+//     return 0;
+// }
+
