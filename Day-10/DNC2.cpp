@@ -104,3 +104,31 @@
 //     return 0;
 // }
 
+
+//printing permutation using recursion or backtracking both are same 
+#include<iostream>
+#include<string>
+using namespace std;
+void printpermutation(string &s,int i){
+    //base condition
+    if(i>=s.length()){
+        cout<<s<<" ";
+        return ;
+    }
+    //swaping
+    for(int j=i;j<s.length();j++){
+        swap(s[i],s[j]);
+        printpermutation(s,i+1);
+        //backtrcing
+        swap(s[i],s[j]);
+    }
+    //backtrcing
+
+}
+int main()
+{
+    string s="abc";
+    printpermutation(s,0);
+    return 0;
+}
+
