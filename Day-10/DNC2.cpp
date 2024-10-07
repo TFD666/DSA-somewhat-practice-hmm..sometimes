@@ -133,6 +133,87 @@
 
 
 //maze in a rat problem using backtracking
+#include<iostream>
+#include<vector>
+#include<string>
+using namespace std;
+bool issafe(int cx,int cy,int row,int col,int arr[][3],vector<vector<bool>>&visited){
+    if(((cx>=0&&cx<row)&&(cy>=0&&cy<col))&&
+    (arr[cx][cy]==1)&&
+    (visited[cx][cy]==false)){
+        return true;
+    }
+    return false;
 
+}
+void solvemaze(int arr[3][3],int row,int col,int i,int j,vector<vector<bool>>&visited,vector<string>&path,string output){
+    if(i==row-1&&j==col-1){
+        path.push_back(output);
+        return;
+    }
+    //down 
+    if(issafe(i+1,j,row,col,arr,visited)){
+        visited[i+1][j]=true;
+        solvemaze(arr,row,col,i+1,j,visited,path,output+'D');
+        //back track
+        visited[i+1][j]=false;
+        
+    }
+
+    //right
+    if(issafe(i,j+1,row,col,arr,visited)){
+        visited[i][j+1]=true;
+        solvemaze(arr,row,col,i,j+1,visited,path,output+'R');
+        //back track
+        visited[i][j+1]=false;
+        
+    }
+
+    //left
+    if(issafe(i,j-1,row,col,arr,visited)){
+        visited[i][j-1]=true;
+        solvemaze(arr,row,col,i,j-1,visited,path,output+'L');
+        //back track
+        visited[i][j-1]=false;
+        
+    }
+
+    //up
+    if(issafe(i-1,j,row,col,arr,visited)){
+        visited[i-1][j]=true;
+        solvemaze(arr,row,col,i-1,j,visited,path,output+'U');
+        //back track
+        visited[i-1][j]=false;
+        
+    }
+
+}
+
+
+int main()
+{
+    int row=3;
+    int col=3;
+    int arr[3][3]={{1,0,0},
+                    {1,1,0},
+                    {1,1,1}};
+    if(arr[0][0]==0){
+        cout<<"no path exist";
+        return 0;
+    }
+    vector<vector<bool>> visited(row,vector<bool>(col,false));
+    vector<string> path;
+    string output="";
+    solvemaze(arr,row,col,0,0,visited,path,output);
+    if(path.size()==0){
+        cout<<"no path exist";
+        return 0;
+    }
+    for(auto i:path){
+        cout<<i<<" ";
+    }
+    
+    return 0;
+}
 
 
