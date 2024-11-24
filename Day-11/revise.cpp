@@ -29,3 +29,24 @@
 
 //     return 0;
 // }
+// #include<iostream>
+// #include<vector>
+// using namespace std;
+// int main()
+// {
+//     vector<int>arr{2,2,1,2,1,2};
+//     int i=0,j=arr.size()-1;
+//         while(i<j){
+//             if(arr[i]>arr[j]){
+//                 swap(arr[i],arr[j]);
+//                 i++;
+//                 j--;
+//             }else{
+//                 j--;
+//             }
+//         }
+//         cout<<arr[arr.size()/2];
+
+//     return 0;
+// }
+

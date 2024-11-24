@@ -187,20 +187,20 @@
 
 // #include<iostream>
 // using namespace std;
-// void last(int &n){
+// void reverse(int &n){
 //     if(n==0){
 //         return;
 //     }
 //     int ans=n%10;
 //     cout<<ans;
 //     n=n/10;
-//     return last(n);
+//     return reverse(n);
 // }
 // int main()
 // {
 //     int n;
 //     cin>>n;
-//     last(n);
+//     reverse(n);
 //     return 0;
 // }
 
