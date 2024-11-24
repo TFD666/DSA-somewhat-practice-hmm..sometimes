@@ -49,4 +49,25 @@
 
 //     return 0;
 // }
-
+// #include<iostream>
+// using namespace std;
+// int main()
+// {
+//     int n=3;
+//     for(int i=0;i<n;i++){
+//         //first pattern
+//         for(int j=0;j<=i;j++){
+//             cout<<j+1;
+//         }
+//         //space
+//         for(int k=2*(n-i-1)-1;k>0;k--){
+//             cout<<" ";
+//         }
+//         //pattern;
+//         for(int l=i+1;l>0;l--){
+//             cout<<l;
+//         }
+//         cout<<endl;
+//     }
+//     return 0;
+// }
