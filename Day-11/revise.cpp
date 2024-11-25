@@ -71,3 +71,73 @@
 //     }
 //     return 0;
 // }
+
+// #include<iostream>
+// #include<vector>
+// using namespace std;
+// vector<int>occurance(vector<int>arr,int k){
+//     vector<int>temp;
+//     int s=0,e=arr.size(),mid=(s+e)/2;
+//     int first=-1,last=-1;
+//     while(s<e){
+//         if(arr[mid]==k){
+//             first=mid;
+//             e=mid-1;
+//         }else if(arr[mid]<k){
+//             s=mid+1;
+//         }else if(arr[mid]>k){
+//             e=mid-1;
+//         }
+//         mid=(s+e)/2;
+//     }
+//     s=0,e=arr.size();
+//     mid=(s+e)/2;
+//     while(s<e){
+//         if(arr[mid]==k){
+//             last=mid;
+//             s=mid+1;
+//         }else if(arr[mid]<k){
+//             s=mid+1;
+//         }else if(arr[mid]>k){
+//             e=mid-1;
+//         }
+//         mid=(s+e)/2;
+//     }
+//     temp.push_back(first);
+//     temp.push_back(last);
+//     return temp;
+// }
+// int main()
+// {
+//     vector<int>arr={3,3,4,4,5,6};
+//     int k=5;
+//     int s=0,e=arr.size(),mid=(s+e)/2;
+//     int first=-1,last=-1;
+//     while(s<=e){
+//         if(arr[mid]==k){
+//             first=mid;
+//             e=mid-1;
+//         }else if(arr[mid]<k){
+//             s=mid+1;
+//         }else if(arr[mid]>k){
+//             e=mid-1;
+//         }
+//         mid=(s+e)/2;
+//     }
+    // s=0,e=arr.size(),mid=(s+e)/2;
+    // while(s<e){
+    //     if(arr[mid]==k){
+    //         last=mid;
+    //         s=mid+1;
+    //     }else if(arr[mid]<k){
+    //         s=mid+1;
+    //     }else if(arr[mid]>k){
+    //         e=mid-1;
+    //     }
+    //     mid=(s+e)/2;
+    // }
+    // cout<<first;
+    // cout<<last;
+    // occurance(arr,k);
+//     return 0;
+// }
